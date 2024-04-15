@@ -1,0 +1,15 @@
+{
+  "name": "electro-ledger",
+  "version": "1.0.0",
+  "description": "Keep track of finances",
+  "main": "frontend/index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "test"
+  },
+  "author": "Gloop",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.3.0"
+  }
+}
