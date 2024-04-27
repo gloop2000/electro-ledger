@@ -1,15 +1,50 @@
 {
   "name": "electro-ledger",
-  "version": "1.0.0",
-  "description": "Keep track of finances",
-  "main": "frontend/index.js",
-  "scripts": {
-    "start": "electron .",
-    "test": "test"
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron-main/main.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.96",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
   },
-  "author": "Gloop",
-  "license": "ISC",
+  "scripts": {
+    "start": "set PORT=3005 && react-scripts start",
+    "electron": "electron .",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
   "devDependencies": {
-    "electron": "^29.3.0"
+    "electron": "^30.0.1",
+    "electron-builder": "^24.13.3",
+    "electron-is-dev": "^3.0.1"
   }
 }
