@@ -1,0 +1,12 @@
+.container {
+  text-align: center;
+}
+
+.year-picker {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  color: white;
+}

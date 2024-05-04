@@ -14,6 +14,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### `npm run electron`
+
+Launch in electron window
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
@@ -44,3 +48,28 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+your-app/
+├── package.json // npm package configuration
+├── electron-main/
+│ ├── main.js // Electron main process entry point
+│ └── electron.js // Electron configuration/setup
+├── public/
+│ ├── index.html // Main HTML file
+│ └── ...
+├── src/
+│ ├── assets/ // Imagess, fonts, and other static assets
+│ ├── components/ // React components
+│ │ ├── TransactionForm.js // Component for transaction input
+│ │ ├── TransactionList.js // Component to display transaction list
+│ │ └── Balance.js // Component to display account balance
+│ ├── redux/ // Redux setup (actions, reducers, store)
+│ │ ├── actions/ // Redux action creators
+│ │ ├── reducers/ // Redux reducers
+│ │ └── store.js // Redux store configuration
+│ ├── screens/ // React components for different screens
+│ │ ├── Home.js // Main screen component
+│ │ └── ...
+│ ├── App.js // Main React application component
+│ └── index.js // React application entry point
+└── ...

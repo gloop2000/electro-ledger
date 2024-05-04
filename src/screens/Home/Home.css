@@ -1,0 +1,6 @@
+.year-picker {
+  font-size: calc(10px + 2vmin);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
