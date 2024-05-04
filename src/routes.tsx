@@ -7,6 +7,7 @@ import Home from "./screens/home/home";
 import User from "./screens/user/user";
 
 const Routes: React.FC = () => {
+  console.log("Routes loaded");
   return (
     <Router>
       <Switch>
