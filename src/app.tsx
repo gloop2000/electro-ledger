@@ -1,4 +1,13 @@
-import { createRoot } from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Routes from "./routes";
 
-const root = createRoot(document.body);
-root.render(<h2>Hello from React!</h2>);
+console.log("App loaded");
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+root.render(
+  <React.StrictMode>
+    <Routes />
+  </React.StrictMode>
+);
