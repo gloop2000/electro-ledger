@@ -1,4 +1,4 @@
-import ReactDOM, { hydrateRoot } from "react-dom/client";
+import ReactDOM from "react-dom/client";
 import Routes from "./routes";
 
 const root = ReactDOM.createRoot(
