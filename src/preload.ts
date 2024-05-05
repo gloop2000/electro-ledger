@@ -4,7 +4,9 @@
 import { contextBridge, ipcRenderer } from "electron";
 
 contextBridge.exposeInMainWorld("api", {
-  ping: () => ipcRenderer.send("ping"),
+  ping: (): Promise<string> => {
+    return ipcRenderer.invoke("ping");
+  },
   addUser: (user: { username: string; email: string }) => {
     ipcRenderer.invoke("add-user", user);
   },

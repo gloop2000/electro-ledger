@@ -27,7 +27,9 @@ const User: React.FC = () => {
     setEmail("");
   };
   const ping = () => {
-    api.ping();
+    api.ping().then((res) => {
+      console.log(res);
+    });
   };
 
   console.log("User loaded");

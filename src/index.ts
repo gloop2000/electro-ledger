@@ -29,8 +29,9 @@ const createWindow = (): void => {
   mainWindow.webContents.openDevTools();
 
   // IPC
-  ipcMain.on("ping", () => {
+  ipcMain.handle("ping", async () => {
     console.log("ping recieved at main process");
+    return "pong";
   });
 
   // Open DB
@@ -43,7 +44,7 @@ const createWindow = (): void => {
   });
 
   // Create user
-  ipcMain.handle("add-user", (event, user) => {
+  ipcMain.handle("add-user", async (event, user) => {
     console.log("Adding user:", user);
     const { username, email } = user;
 

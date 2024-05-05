@@ -1,5 +1,5 @@
 declare namespace api {
-  function ping(): void;
+  function ping(): Promise<string>;
   function addUser(user: {
     username: string;
     email: string;
