@@ -8,6 +8,6 @@ run `npm install` to install dependencies
 
 run `npm start` to launch development server
 
-run `npm  package` to create package
+run `npm run package` to create package
 
-run `npm make` to create distributables
+run `npm run make` to create distributables
