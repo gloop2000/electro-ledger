@@ -4,4 +4,6 @@ declare namespace api {
     username: string;
     email: string;
   }): Promise<{ success: boolean; error?: string }>;
+
+  function getAllUsers(): Promise<any>;
 }

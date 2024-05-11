@@ -62,6 +62,19 @@ const createWindow = (): void => {
       }
     );
   });
+
+  // Expose function to query all user details
+  ipcMain.handle("get-all-users", async () => {
+    return new Promise((resolve, reject) => {
+      db.all("SELECT * FROM users", (err, rows) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(rows);
+        }
+      });
+    });
+  });
 };
 
 // This method will be called when Electron has finished

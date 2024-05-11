@@ -10,4 +10,8 @@ contextBridge.exposeInMainWorld("api", {
   addUser: (user: { username: string; email: string }) => {
     ipcRenderer.invoke("add-user", user);
   },
+
+  getAllUsers: () => {
+    return ipcRenderer.invoke("get-all-users");
+  },
 });
